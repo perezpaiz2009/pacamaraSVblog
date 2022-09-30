@@ -172,6 +172,11 @@ article:last-child {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 2rem;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 .boton--primario {
@@ -209,7 +214,7 @@ article:last-child {
 
 li:last-child {
     border: none;
-    margin-bottom: none;
+    margin: none;
 }
 
 .widget-curso__info,
@@ -219,7 +224,7 @@ li:last-child {
     font-size: 2rem;
 }
 
-.footer {
+.contenedor__footer {
     display: flex;
     height: 11rem;
     background-color: var(--negro);
@@ -229,7 +234,7 @@ li:last-child {
 }
 
 @media (max-width: 768px) {
-    .footer {
+    .contenedor__footer {
         flex-direction: column;
         height: 15rem;
         padding-top: 3rem;
@@ -271,4 +276,56 @@ li:last-child {
 
 .contenido-entrada {
     margin-bottom: 5rem;
+}
+
+
+/* formulario  */
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.formulario {
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    /*  se le dice al elemento que tiene factor de crecimiento 0,  tampoco se hara mas 
+    pequeño; ademas se queda con width de 9 rem   */
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field {
+    flex: 1;
+    /* todo lo que queda disponible del contenedor el toma el resto,
+     ya que su hermano ya se le definio un espacio   */
+    border: 1px solid var(--gris);
+}
+
+.campo__field--textarea {
+    height: 20rem;
+}
+
+@media (max-width: 408px) {
+    .campo {
+        display: unset;
+    }
+
+    .campo__field {
+        margin-bottom: 1rem;
+    }
 }
