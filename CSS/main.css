@@ -81,14 +81,22 @@ img {
 }
 
 /** codigo   **/
+.webp .header {
+    background-image: linear-gradient(rgba(120, 77, 60, 0.315),
+            rgba(120, 77, 60, 0.39)), url(../img/banner.webp);
+}
+
+.no-webp .header {
+
+    background-image: linear-gradient(rgba(120, 77, 60, 0.397),
+            rgba(120, 77, 60, 0.363)), url(../img/banner.jpg);
+}
+
 .header {
-    background-image: linear-gradient(rgba(44, 31, 22, 0.541),
-            rgba(44, 31, 22, 0.801)), url(../img/banner.jpg);
     height: 55rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-
 }
 
 .header__texto {
